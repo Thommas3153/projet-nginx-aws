@@ -1,0 +1,24 @@
+---
+
+- name: Deploy Nginx on AWS Ubuntu VM
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Start and enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy index.html
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        mode: "0644"
