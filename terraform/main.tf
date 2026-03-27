@@ -46,7 +46,7 @@ resource "aws_security_group" "nginx_sg" {
 
 # EC2 Instance (Free Tier t3.micro)
 resource "aws_instance" "nginx_vm" {
-  ami                    = "ami-0ad53ba8e49f41b76"  # Ubuntu 22.04 LTS Paris
+  ami                    = "ami-0ad53ba8e49f41b76"  # VM Linux Ubuntu 22.04 LTS Paris
   instance_type          = "t3.micro"
   key_name               = aws_key_pair.nginx_key.key_name
   vpc_security_group_ids = [aws_security_group.nginx_sg.id]
