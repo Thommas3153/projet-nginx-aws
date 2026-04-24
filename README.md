@@ -143,14 +143,3 @@ terraform destroy
 - Automatiser l'ouverture de nouveaux datacenters
 
 ***
-
-## 👤 Auteur
-
-**Tomas** — Master Systèmes, Réseaux & Cloud Computing  
-GitHub : [@Thommas3153](https://github.com/Thommas3153)
-
-***
-
-## 📄 Licence
-
-MIT License
